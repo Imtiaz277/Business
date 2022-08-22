@@ -1,0 +1,196 @@
+//- Navigation
+@-webkit-keyframes animateNavbar{
+	0%{
+		top: -8rem;
+	}
+
+	100%{
+		top: 0rem;
+	}
+}
+
+@keyframes animateNavbar{
+	0%{
+		top: -8rem;
+	}
+
+	100%{
+		top: 0rem;
+	}
+}
+
+//- Section 1 Title
+@-webkit-keyframes animateHeading{
+	0%{
+		/* 0% = 0 seconds */
+		transform: translateZ(8rem);
+		opacity: 0;
+		letter-spacing: 3rem;
+	}
+
+	3%{
+		/* 3% = 0.36 second */
+		transform: translateZ(0);
+		opacity: 1;
+		letter-spacing: 1.5rem;
+	}
+
+	25%{
+		/* 25% = 3 seconds */
+		transform: translateZ(0);
+		opacity: 1;
+		letter-spacing: 1.5rem;
+	}
+
+	28%{
+		/* 28% = 3.36 seconds */
+		transform: translateZ(8rem);
+		opacity: 0;
+		letter-spacing: 3rem;
+	}
+
+	100%{
+		/* 100% = 12 seconds */
+		transform: translateZ(8rem);
+		opacity: 0;
+		letter-spacing: 3rem;
+	}
+}
+
+@keyframes animateHeading{
+	0%{
+		/* 0% = 0 seconds */
+		transform: translateZ(8rem);
+		opacity: 0;
+		letter-spacing: 3rem;
+	}
+
+	3%{
+		/* 3% = 0.36 second */
+		transform: translateZ(0);
+		opacity: 1;
+		letter-spacing: 1.5rem;
+	}
+
+	25%{
+		/* 25% = 3 seconds */
+		transform: translateZ(0);
+		opacity: 1;
+		letter-spacing: 1.5rem;
+	}
+
+	28%{
+		/* 28% = 3.36 seconds */
+		transform: translateZ(8rem);
+		opacity: 0;
+		letter-spacing: 3rem;
+	}
+
+	100%{
+		/* 100% = 12 seconds */
+		transform: translateZ(8rem);
+		opacity: 0;
+		letter-spacing: 3rem;
+	}
+}
+
+@include respond(phone){
+	@-webkit-keyframes animateHeading{
+		0%{
+			/* 0% = 0 seconds */
+			transform: translateZ(8rem);
+			opacity: 0;
+			letter-spacing: 2rem;
+		}
+	
+		3%{
+			/* 3% = 0.36 second */
+			transform: translateZ(0);
+			opacity: 1;
+			letter-spacing: 1rem;
+		}
+	
+		25%{
+			/* 25% = 3 seconds */
+			transform: translateZ(0);
+			opacity: 1;
+			letter-spacing: 1rem;
+		}
+	
+		28%{
+			/* 28% = 3.36 seconds */
+			transform: translateZ(8rem);
+			opacity: 0;
+			letter-spacing: 2rem;
+		}
+	
+		100%{
+			/* 100% = 12 seconds */
+			transform: translateZ(8rem);
+			opacity: 0;
+			letter-spacing: 2rem;
+		}
+	}
+	
+	@keyframes animateHeading{
+		0%{
+			/* 0% = 0 seconds */
+			transform: translateZ(8rem);
+			opacity: 0;
+			letter-spacing: 2rem;
+		}
+	
+		3%{
+			/* 3% = 0.36 second */
+			transform: translateZ(0);
+			opacity: 1;
+			letter-spacing: 1rem;
+		}
+	
+		25%{
+			/* 25% = 3 seconds */
+			transform: translateZ(0);
+			opacity: 1;
+			letter-spacing: 1rem;
+		}
+	
+		28%{
+			/* 28% = 3.36 seconds */
+			transform: translateZ(8rem);
+			opacity: 0;
+			letter-spacing: 2rem;
+		}
+	
+		100%{
+			/* 100% = 12 seconds */
+			transform: translateZ(8rem);
+			opacity: 0;
+			letter-spacing: 2rem;
+		}
+	}
+}
+
+//- Section 1 Text and Button
+@-webkit-keyframes fadeAnimation{
+	0%{
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	100%{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes fadeAnimation{
+	0%{
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	100%{
+		opacity: 1;
+		visibility: visible;
+	}
+}

@@ -1,0 +1,271 @@
+//- Common Styles
+.section-2, .section-3, .section-4{
+    padding: 15rem 0;
+    width: 100%;
+}
+
+//- Section 1
+.section-1{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../img/dark-bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .banner{
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    
+        &__heading{
+            margin-bottom: 4rem;
+            height: 20rem;
+            perspective: 50rem;
+            overflow: hidden;
+    
+            span{
+                font-family: 'Oswald', sans-serif;
+                font-size: 12rem;
+                font-weight: 400;
+                text-transform: uppercase;
+                color: $color-white-1;
+                text-shadow: 0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.5);
+                letter-spacing: 3rem;
+                position: absolute;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                transform: translateZ(8rem);
+                opacity: 0;
+                @include respond(phone){ 
+                    font-size: 4.5rem;
+                    letter-spacing: 2rem;
+                }
+            }
+    
+            &--1{ -webkit-animation: animateHeading 12s 3s infinite; animation: animateHeading 12s 3s infinite; }
+            &--2{ -webkit-animation: animateHeading 12s 6s infinite; animation: animateHeading 12s 6s infinite; }
+            &--3{ -webkit-animation: animateHeading 12s 9s infinite; animation: animateHeading 12s 9s infinite; }
+            &--4{ -webkit-animation: animateHeading 12s 12s infinite; animation: animateHeading 12s 12s infinite; }
+        }
+    
+        &__text{
+            width: 40%;
+            font-size: 4rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: $color-white-1;
+            background-color: rgba($color-black-1, 0.6);
+            margin: 0 auto 4rem auto;
+            padding: 1rem 0;
+            box-shadow: 1rem 1rem 5rem rgba($color-black-1, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            -webkit-animation: fadeAnimation 1s 1.5s forwards;
+                    animation: fadeAnimation 1s 1.5s forwards;
+            @include respond(small-desktop){ 
+                width: 45rem; 
+                font-size: 3rem;
+            }
+            @include respond(phone){ width: 50%; }
+            @include respond(small-phone){ width: 80%; }
+        }
+    
+        &__btn{
+            cursor: pointer;
+            position: relative;
+            width: 30rem;
+            height: 6rem;
+            margin: 0 auto;
+            background-image: linear-gradient(to right, $color-red-1, $color-red-3);
+            font-size: 2rem;
+            color: $color-white-1;
+            text-transform: uppercase;
+            text-shadow: 0.6rem 0.3rem 0.2rem rgba(0, 0, 0, 0.4);
+            box-shadow: 1rem 2rem 3rem rgba(0, 0, 0, 0.5);
+            border-radius: 3rem;
+            border: 0.1rem solid $color-red-2;
+            overflow: hidden; //- This is to prevent the ::before from overflowing
+            opacity: 0; //- Opacity is zero for a few seconds when the user opens up the website
+            visibility: hidden;
+            -webkit-animation: fadeAnimation 1s 2s forwards;
+                    animation: fadeAnimation 1s 2s forwards;
+    
+            &::before{
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(to right, transparent, $color-white-1, transparent);
+                position: absolute;
+                top: 0;
+                left: -100%;
+                transform: skewX(-30deg);
+                transition: left 0.5s;
+            }
+    
+            &:hover::before{ left: 100%; }
+        }
+    }
+}
+
+//- Section 2
+.section-2{ 
+    background-color: $color-black-2;
+    
+    .section-2-paragraph{
+        width: 100%;
+        font-size: 2rem;
+        color: $color-white-2;
+        border-top: 0.3rem double $color-white-3;
+        border-bottom: 0.3rem double $color-white-3;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        text-shadow: 1rem 1rem 2rem rgba($color-black-1, 0.7);
+        line-height: 1.5;
+    
+        .fa-quote-left{
+            align-self: flex-start;
+            font-size: 5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .fa-quote-right{
+            align-self: flex-end;
+            font-size: 5rem;
+        }
+    }
+    
+}
+
+//- Section 3
+.section-3{ background-color: $color-black-3; }
+
+//- Section 4
+.section-4{ 
+    background-color: $color-black-5; 
+
+    .contact-container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        .contact-details{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8rem;
+            @include respond(small-phone){ flex-direction: column; }
+    
+            div{
+                flex: 0 0 33.3333%;
+                text-align: center;
+                @include respond(small-desktop){ &:not(:last-child){ margin-bottom: 4rem; } }
+            }
+    
+            i{
+                font-size: 5rem;
+                color: $color-red-3;
+            }
+    
+            h3{
+                font-family: 'MADE Soulmaze', sans-serif;
+                font-size: 2.5rem;
+                font-weight: 200;
+                margin: 2rem 0;
+                color: $color-white-5;
+            }
+            
+            p{
+                font-size: 1.6rem;
+                color: $color-white-3;
+                @include respond(phone){ font-size: 2.1rem; }
+            }
+        }
+    
+        .contact-title{
+            font-size: 4rem;
+            color: $color-white-5;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+        }
+    
+        .contact-form{
+            width: 70rem;
+            @include respond(small-desktop){ width: 100%; }
+            display: flex;
+            flex-direction: column;
+    
+            input, textarea{
+                padding: 1.5rem;
+                background-color: $color-black-6;
+                color: $color-white-4;
+                border: none;
+                margin-bottom: 2rem;
+                font-family: 'Oswald', sans-serif;
+                font-size: 1.8rem;
+                font-weight: 300;
+                letter-spacing: 0.1rem;
+            }
+    
+            textarea{
+                max-width: 100%;
+                max-height: 15rem;
+                min-height: 5.5rem;
+            }
+            
+            input[type="submit"]{
+                background-color: $color-red-3;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+    
+            input[type="submit"]:hover{ background-color: $color-red-8; }
+        }
+        
+    }
+}
+
+//- Footer
+.footer{
+    padding: 5rem ;
+	width: 100%;
+	background-color: $color-black-7;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+    @include respond(small-desktop){ flex-direction: column; }
+    @include respond(phone){ align-items: flex-start; }
+
+    .footer-nav{
+        @include respond(small-desktop){ margin-bottom: 4rem; }
+        a{
+            font-family: 'MADE Soulmaze', sans-serif;
+            color: $color-white-5;
+            font-size: 2rem;
+            margin-right: 3rem;
+            letter-spacing: 0.1rem;
+            transition: color 0.3s;
+            &:hover{ color: $color-red-9; }
+            @include respond(phone){
+                display: flex;
+                flex-direction: column;
+                margin: 0 0 4rem;
+            }
+        }
+    }
+
+    .copyright{
+        font-size: 2rem;
+        color: $color-white-2;
+    }
+}

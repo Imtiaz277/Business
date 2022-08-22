@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>A Title</title>
+
+	<!--- CSS Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="sass/styles.css">
+
+	<!--- Font Awesome -->
+	<script src="https://kit.fontawesome.com/eb8b3cd471.js" crossorigin="anonymous"></script>
+
+	<!--- MADE Soulmaze font -->
+	<link href="http://fonts.cdnfonts.com/css/made-soulmaze" rel="stylesheet">
+
+	<!--- Swiper JS plugin -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+	
+
+</head>
+<body>
+
+
+	<!--- Navbar -->
+	<nav class="navbar">
+		<div class="navbar__logo">
+			<a href="#">
+				<span>C</span>ode <span>A</span>nd <span>C</span>reate
+			</a>
+		</div>
+		
+		<div class="navbar__list">
+			<a href="#home" class="navbar__link">Home</a>
+			<a href="#about-us" class="navbar__link">About</a>
+			<a href="#pricing" class="navbar__link">Pricing</a>
+			<a href="#contact" class="navbar__link">Contact</a>
+		</div>
+	</nav>
+
+	<!--- Menu -->
+	<div class="menu">
+		<div class="menu__line menu__line--1"></div>
+		<div class="menu__line menu__line--2"></div>
+		<div class="menu__line menu__line--3"></div>
+	</div>
+
+	<!--- Main sections -->
+	<main>
+
+		<!--- Section 1 -->
+		<section class="section-1" id="home">
+
+			<div class="banner">
+				<h1 class="banner__heading">
+					<span class="banner__heading--1">Business Ideas</span>
+					<span class="banner__heading--2">Consulting</span>
+					<span class="banner__heading--3">Digital Marketing</span>
+					<span class="banner__heading--4">Strategy</span>
+				</h1>
+
+				<p class="banner__text">lorem ipsum dolor sit</p>
+				
+				<button class="banner__btn">Discover Now</button>
+			</div>
+
+		</section>
+
+		<!--- Section 2 -->
+		<section class="section-2" id="about-us">
+
+			<div class="d-flex d-flex--align-center u-w-90 u-mx-auto">
+
+				<div class="col-1-3">
+					<div class="d-flex d-flex--align-center">
+						<h1 class="section-title">About Us</h1>
+						<div class="u-line">&nbsp;</div>
+					</div>
+				</div>
+
+				<div class="col-2-3">
+
+					<!--- Video Container -->
+					<div class="video-container">
+
+						<!--- Video to be played -->
+						<video class="video">
+							<source src="../img/about-us-video.mp4" type="video/mp4">
+  							<source src="../img/about-us-video.ogg" type="video/ogg">
+							<source src="../img/about-us-video.webm" type="video/webm">
+							Your browser does not support the video tag.
+						</video>
+					
+						<!--- Video controls container -->
+						<div class="controls">
+							
+							<!--- Video controls bar container -->
+							<div class="video-bar-container">
+								<div class="video-bar"></div> <!--- Video controls bar -->
+							</div>
+
+							<!--- Button to play the video -->
+							<div class="button-container">
+								<button><i class="far fa-play-circle"></i></button>
+							</div>
+
+						</div>
+						
+					</div>
+
+					<p class="section-2-paragraph">
+						<i class="fas fa-quote-left"></i>
+						Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+						Earum quis, odit reprehenderit debitis fugit qui 
+						explicabo distinctio, fuga aspernatur magnam, excepturi 
+						itaque saepe temporibus alias quidem libero magni 
+						accusantium facilis?
+						<i class="fas fa-quote-right"></i>
+					</p>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<!--- Section 3 -->
+		<section class="section-3" id="pricing">
+
+			<div class="d-flex d-flex--align-center u-w-90 u-mx-auto">
+
+				<div class="col-1-3">
+					<div class="d-flex d-flex--align-center">
+						<h1 class="section-title">Pricing</h1>
+						<div class="u-line">&nbsp;</div>
+					</div>
+				</div>
+
+				<div class="col-2-3">
+
+					<div class="swiper-container">
+						<div class="swiper-wrapper pricing-card-container">
+							
+							<div class="swiper-slide pricing-card">
+								<div class="pricing-card__front">
+									<h1 class="pricing-card__heading pricing-card__heading--free">FREE</h1>
+									<h3 class="pricing-card__price">$0</h3>
+									<ul class="pricing-card__list pricing-card__list--free">
+										<li>
+											<i class="fas fa-check"></i>
+											<span>Pricing Card Item</span>
+										</li>
+										<li>
+											<i class="fas fa-check"></i>
+											<span>Pricing Card Item</span>
+										</li>
+										<li>
+											<i class="fas fa-times"></i>
+											<span>Pricing Card Item</span>
+										</li>
+										<li>
+											<i class="fas fa-times"></i>
+											<span>Pricing Card Item</span>
+										</li>
+										<li>
+											<i class="fas fa-times"></i>
+											<span>Pricing Card Item</span>
+										</li>
+									</ul>
+									<button class="pricing-card__btn pricing-card__btn--free">Choose Plan</button>
+								</div>
+								<div class="pricing-card__back pricing-card__back--free">
+									<a href="#">Order Now</a>
+								</div>
+							</div>
+		
+							<div class="pricing-card swiper-slide">
+								<div class="pricing-card__front">
+									<h1 class="pricing-card__heading pricing-card__heading--basic">BASIC</h1>
+									<h3 class="pricing-card__price">$299</h3>
+									<ul class="pricing-card__list pricing-card__list--basic">
+										<li>
+											<i class="fas fa-check"></i>
+											<span>Pricing Card Item</span>
+										</li>
+										<li>
+											<i class="fas fa-check"></i>
+											<span>Pricing Card Item</span>
+										</li>
+										<li>
+											<i class="fas fa-check"></i>
+											<span>Pricing Card Item</span>
+										</li>
+										<li>
+											<i class="fas fa-check"></i>
+											<span>Pricing Card Item</span>
+										</li>
+										<li>
+											<i class="fas fa-times"></i>
+											<span>Pricing Card Item</span>
+										</li>
+									</ul>
+									<button class="pricing-card__btn pricing-card__btn--basic">Choose Plan</button>
+								</div>
+								<div class="pricing-card__back pricing-card__back--basic">
+									<a href="#">Order Now</a>
+								</div>
+							</div>
+		
+							<div class="pricing-card swiper-slide">
+								<div class="pricing-card__front">
+									<h1 class="pricing-card__heading pricing-card__heading--standard">STANDARD</h1>
+									<h3 class="pricing-card__price">$699</h3>
+									<ul class="pricing-card__list pricing-card__list--standard">
+										<li>
+											<i class="fas fa-check"></i>
+											<span>Pricing Card Item</span>
+										</li>
+										<li>
+											<i class="fas fa-check"></i>
+											<span>Pricing Card Item</span>
+										</li>
+										<li>
+											<i class="fas fa-check"></i>
+											<span>Pricing Card Item</span>
+										</li>
+										<li>
+											<i class="fas fa-check"></i>
+											<span>Pricing Card Item</span>
+										</li>
+										<li>
+											<i class="fas fa-check"></i>
+											<span>Pricing Card Item</span>
+										</li>
+									</ul>
+									<button class="pricing-card__btn pricing-card__btn--standard">Choose Plan</button>
+								</div>
+								<div class="pricing-card__back pricing-card__back--standard">
+									<a href="#">Order Now</a>
+								</div>
+							</div>
+		
+							<div class="pricing-card swiper-slide">
+								<div class="pricing-card__front">
+									<h1 class="pricing-card__heading pricing-card__heading--premium">PREMIUM</h1>
+									<h3 class="pricing-card__price">$999</h3>
+									<ul class="pricing-card__list pricing-card__list--premium">
+										<li>
+											<i class="fas fa-check"></i>
+											<span>Pricing Card Item</span>
+										</li>
+										<li>
+											<i class="fas fa-check"></i>
+											<span>Pricing Card Item</span>
+										</li>
+										<li>
+											<i class="fas fa-check"></i>
+											<span>Pricing Card Item</span>
+										</li>
+										<li>
+											<i class="fas fa-check"></i>
+											<span>Pricing Card Item</span>
+										</li>
+										<li>
+											<i class="fas fa-check"></i>
+											<span>Pricing Card Item</span>
+										</li>
+										<li>
+											<i class="fas fa-check"></i>
+											<span>Pricing Card Item</span>
+										</li>
+									</ul>
+									<button class="pricing-card__btn pricing-card__btn--premium">Choose Plan</button>
+								</div>
+								<div class="pricing-card__back pricing-card__back--premium">
+									<a href="#">Order Now</a>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+
+				</div>
+				
+			</div>
+
+		</section>
+
+		<!--- Section 4 -->
+		<section class="section-4" id="contact">
+			
+			<div class="d-flex d-flex--align-center u-w-90 u-mx-auto">
+
+				<div class="col-1-3">
+					<div class="d-flex d-flex--align-center">
+						<h1 class="section-title">Contact</h1>
+						<div class="u-line">&nbsp;</div>
+					</div>
+				</div>
+
+				<div class="col-2-3">
+
+					<div class="contact-container">
+						<div class="contact-details">
+							<div class="phone">
+								<i class="fas fa-mobile-alt"></i>
+								<h3>Phone</h3>
+								<p>+123 456789</p>
+								<p>+987 654 321</p>
+							</div>
+
+							<div class="address">
+								<i class="fas fa-map-marker-alt"></i>
+								<h3>Address</h3>
+								<p>Main Street #123</p>
+							</div>
+							
+							<div class="email">
+								<i class="fas fa-envelope"></i>
+								<h3>Email</h3>
+								<p>support@gmail.com</p>
+								<p>sales@gmail.com</p>
+							</div>
+						</div>
+						<h1 class="contact-title">Get In Touch</h1>
+						<form class="contact-form">
+							<input type="text" placeholder="Your Name">
+							<input type="email" placeholder="Your Email">
+							<textarea placeholder="Your Message"></textarea>
+							<input type="submit" value="Send Message">
+						</form>
+					</div>
+
+				</div>
+
+			</div>
+			
+		</section>
+
+	</main>
+
+	<!--- Footer -->
+	<footer class="footer">
+
+		<div class="footer-nav">
+			<a href="#home">Home</a>
+			<a href="#about-us">About Us</a>
+			<a href="#pricing">Pricing</a>
+			<a href="#contact">Contact</a>
+		</div>
+
+		<p class="copyright">
+			Copyright &copy;CodeAndCreate All Rights Reserved 
+		</p>
+		
+	</footer>
+
+
+
+
+
+
+	<!-- Swiper JS plugin -->
+	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+	
+	<script src="script.js"></script>
+
+</body>
+</html>

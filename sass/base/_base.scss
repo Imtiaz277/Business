@@ -1,0 +1,40 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*{
+    outline: none;
+	text-decoration: none;
+	list-style-type: none;
+	font-family: 'Baloo Da 2', cursive;
+}
+
+html {
+
+    scroll-behavior: smooth;
+    
+    //This defines what 1rem is
+    font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5%
+
+    //width < 1800?
+    //@include respond(big-desktop){ font-size: 80%; } //1rem = 12px; 12px/16px = 75%
+
+    //width < 1200?
+    @include respond(tab-land){ font-size: 56.25%; } //1rem = 9px; 9px/16px = 56.25% 
+
+    //width < 900?
+    @include respond(tab-port){ font-size: 50%; } //1rem = 8px; 8px/16px = 50%
+
+    //width < 600?
+    @include respond(phone){ font-size: 35%; } //1rem = 4.8px; 4.8px/16px = 30%
+}
+
+html, body{ overflow-x: hidden; }
+
+// This is for changing the color when the user highlights the text.
+//Default is light blue and white
+::selection{
+    
+}

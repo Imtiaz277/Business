@@ -1,0 +1,14 @@
+// Import here
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+body{ font-family: 'Baloo Da 2', sans-serif; }
+
+.section-title{
+    font-family: 'Oswald', sans-serif;
+	font-size: 10rem;
+	font-weight: 300;
+	color: #ddd;
+	margin-right: 4rem;
+	line-height: 1;
+	@include respond(small-desktop){ margin: 0 0 8rem; }
+}
